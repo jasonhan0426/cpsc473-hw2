@@ -24,11 +24,10 @@ function titleFromThumb(thumbnail) {
 function setDetailsFromThumb(thumbnail) {
   'use strict';
   //gold challenge
-  var temp = Math.floor(Math.random()*10);
-  if (temp%5 != 0) {
+  var temp = Math.floor(Math.random() * 10);
+  if (temp % 5 != 0) {
     setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail));
-  }
-  else {
+  } else {
     setDetails('img/tacocat.jpg', titleFromThumb(thumbnail));
   }
 
@@ -38,7 +37,7 @@ function setDetailsFromThumb(thumbnail) {
 
 function addThumbClickHandler(thumb) {
   'use strict';
-  thumb.addEventListener('click', function (event) {
+  thumb.addEventListener('click', function(event) {
     event.preventDefault();
     setDetailsFromThumb(thumb);
   });
